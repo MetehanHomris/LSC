@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background: linear-gradient(white, cornflowerblue);
+    min-height: 10vh;
+}
+
+#logo {
+    font-family: "Permanent Marker", cursive;
+    background-color: #00308f;
+    border: 1px white solid;
+    font-size: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    color: lightskyblue;
+    border-radius: 10px;
+    animation: logo 3s infinite;
+    width: 100%;
+    min-height: 3vh;
+}
+
+@keyframes logo {
+    50% {
+        background-color: #007fff;
+    }
+}
+
+.pages {
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 5vh;
+    align-items: center;
+}
+
+.page {
+    font-family: "Permanent Marker", cursive;
+    background-color: #1f75fe;
+    border: 1px #1f75fe solid;
+    width: 200px;
+    /* KENDIME NOT width vermek yerine padding vermek ve hover'da padding ile oynamak daha iyi olabilir */
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #2a52be;
+    transition: color 0.7s, border-color 0.7s, background-color 0.7s, width 0.7s, font-size 0.7s, box-shadow 0.7s;
+}
+
+.page:hover {
+    width: 300px;
+    font-size: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #1f75fe;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.join {
+    min-height: 15vh;
+    background-color: cornflowerblue;
+    font-family: "Acme", sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join div {
+    float: left;
+}
+
+.join img {
+    height: 8vh;
+    float: left;
+    animation: join 2s infinite;
+    position: relative;
+}
+
+@keyframes join {
+    0% {
+        top: -1vh;
+        /*KENDIME NOT vh yerine px cinsinden ver */
+        left: 2%;
+    }
+    70% {
+        top: 3vh;
+        left: 2%;
+    }
+    100% {
+        top: -1vh;
+        left: 2%;
+    }
+}
+
+.contacts-main-media {
+    background-color: cornflowerblue;
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contacts-main-media img {
+    border-radius: 50%;
+    height: 40vh;
+    /*KENDIME NOT width % verirsem yüzdeyi anchor elemtine göre aldığından düzgün gözükmüyor*/
+    transition: height 0.7s;
+}
+
+.contacts-main-media img:hover {
+    height: 50vh;
+}
+
+.footer-email {
+    height: 15vh;
+    background-color: cornflowerblue;
+    font-family: "Acme", sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.footer-email i {
+    margin-left: 1em;
+}
+
+.footer-email a {
+    color: black;
+}
+
+.footer-email span {
+    user-select: none;
+}
+
+@media screen and (max-width: 900px) {
+    .footer-email {
+        display: none;
+    }
+    .join {
+        display: none;
+    }
+    .contacts-main-media {
+        min-height: 90vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
