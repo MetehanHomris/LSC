@@ -8,6 +8,10 @@ body {
     min-height: 10vh;
 }
 
+.header a {
+    text-decoration: none;
+}
+
 #logo {
     font-family: "Permanent Marker", cursive;
     background-color: #00308f;
@@ -40,10 +44,9 @@ body {
     background-color: #1f75fe;
     border: 1px #1f75fe solid;
     width: 200px;
-    /* KENDIME NOT width vermek yerine padding vermek ve hover'da padding ile oynamak daha iyi olabilir */
-    box-sizing: border-box;
     text-align: center;
     color: white;
+    box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #2a52be;
     transition: color 0.7s, border-color 0.7s, background-color 0.7s, width 0.7s, font-size 0.7s, box-shadow 0.7s;
@@ -52,13 +55,21 @@ body {
 .page:hover {
     width: 300px;
     font-size: 20px;
-    box-sizing: border-box;
     background-color: white;
     color: #1f75fe;
 }
 
-.header a {
-    text-decoration: none;
+@media screen and (max-width: 600px) {
+    .pages {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 210px) {
+    .page {
+        width: 100px;
+    }
 }
 
 .join {
@@ -110,7 +121,8 @@ body {
 .contacts-main-media img {
     border-radius: 50%;
     height: 40vh;
-    /*KENDIME NOT width % verirsem yüzdeyi anchor elemtine göre aldığından düzgün gözükmüyor*/
+    width: 100%;
+    /*KENDIME NOT width % verirsem yüzdeyi anchor elemtine göre aldığından düzgün gözükmüyor, tek seçenek 100% vermek ki sayfa shrink edince onlar da istediğim gib küçülsün.*/
     transition: height 0.7s;
 }
 
