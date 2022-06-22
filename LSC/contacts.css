@@ -17,21 +17,13 @@
     float: left;
     animation: join 2s infinite;
     position: relative;
+    left: 2%;
+    top: -10px;
 }
 
 @keyframes join {
-    0% {
-        top: -1vh;
-        /*KENDIME NOT vh yerine px cinsinden ver */
-        left: 2%;
-    }
     70% {
-        top: 3vh;
-        left: 2%;
-    }
-    100% {
-        top: -1vh;
-        left: 2%;
+        top: 30px;
     }
 }
 
@@ -80,15 +72,41 @@
 }
 
 @media screen and (max-width: 900px) {
+    .contacts-main {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
     .footer-email {
-        display: none;
+        font-size: 40px;
     }
     .join {
         display: none;
     }
     .contacts-main-media {
-        min-height: 90vh;
+        min-height: 75vh;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer-email {
+        display: none;
+    }
+    .contacts-main-media {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .join {
+        display: none;
+    }
+    .contacts-main-media {
+        min-height: 90vh;
+    }
+    .footer-email {
+        display: none;
     }
 }

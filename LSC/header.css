@@ -64,10 +64,20 @@ body {
         flex-direction: column;
         justify-content: center;
     }
+    .page {
+        box-shadow: none;
+    }
+    .page:hover {
+        box-shadow: none;
+        width: 250px;
+    }
 }
 
 @media screen and (max-width: 210px) {
     .page {
         width: 100px;
+    }
+    .page:hover {
+        width: 200px;
     }
 }
