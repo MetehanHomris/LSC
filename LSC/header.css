@@ -43,7 +43,7 @@ body {
     font-family: "Permanent Marker", cursive;
     background-color: #1f75fe;
     border: 1px #1f75fe solid;
-    width: 200px;
+    width: 250px;
     text-align: center;
     color: white;
     box-sizing: border-box;
@@ -53,16 +53,17 @@ body {
 }
 
 .page:hover {
-    width: 300px;
+    width: 350px;
     font-size: 20px;
     background-color: white;
     color: #1f75fe;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .pages {
         flex-direction: column;
         justify-content: center;
+        padding-bottom: 20px;
     }
     .page {
         box-shadow: none;
@@ -73,7 +74,7 @@ body {
     }
 }
 
-@media screen and (max-width: 210px) {
+@media screen and (max-width: 250px) {
     .page {
         width: 100px;
     }

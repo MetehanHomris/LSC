@@ -78,24 +78,22 @@
         justify-content: center;
     }
     .footer-email {
-        font-size: 40px;
+        font-size: 30px;
+        min-width: 5vh;
     }
     .join {
         display: none;
     }
     .contacts-main-media {
-        min-height: 75vh;
+        min-height: 85vh;
         flex-direction: column;
         justify-content: center;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
     .footer-email {
         display: none;
-    }
-    .contacts-main-media {
-        padding-top: 20px;
     }
 }
 
