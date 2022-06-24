@@ -1,0 +1,43 @@
+.info-main {
+    min-height: calc(100vh - 100px);
+    font-family: "Patrick Hand", cursive;
+    width: 100%;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-main-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+
+.info-main-top img {
+    width: 20%;
+    border-radius: 25%;
+    transition: width 1s;
+}
+
+.info-main-top img:hover {
+    width: 24%;
+}
+
+.info-main-bottom {
+    width: 90%;
+    background-color: cornflowerblue;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 650px) {
+    .info-main-top {
+        display: none;
+    }
+    .info-main-bottom {
+        width: 100%;
+    }
+}
